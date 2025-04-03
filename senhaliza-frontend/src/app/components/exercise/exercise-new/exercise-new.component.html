@@ -1,0 +1,47 @@
+<h4>Ejercicio</h4>
+<span *ngIf="noExiste">Ejercicio con el codigo {{idExercise}} no existe </span>
+
+
+<form [formGroup]="detalleForm" *ngIf="!noExiste">
+    <mat-form-field appearance="fill" >
+        <mat-label>Id del ejercicio</mat-label>
+        <input matInput formControlName="id" readonly="true">                
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+        <mat-label> Nivel </mat-label>
+        <input matInput formControlName="level" >
+        <span style="color: red;" *ngIf="detalleForm.get('level')?.hasError('minlength') && detalleForm.get('level')?.touched">mínimo 1 letra</span>
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+        <mat-label> Tipo de pregunta </mat-label>
+        <textarea matInput formControlName="type_question" ></textarea>          
+        <span style="color: red;" *ngIf="detalleForm.get('type_question')?.hasError('minlength') && detalleForm.get('type_question')?.touched">mínimo 1 letra</span>
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+        <mat-label> Pregunta </mat-label>
+        <textarea matInput formControlName="question" ></textarea>          
+        <span style="color: red;" *ngIf="detalleForm.get('question')?.hasError('minlength') && detalleForm.get('question')?.touched">mínimo 1 letra</span>
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+        <mat-label> Comentario </mat-label>
+        <textarea matInput formControlName="comment" ></textarea>          
+        <span style="color: red;" *ngIf="detalleForm.get('comment')?.hasError('minlength') && detalleForm.get('comment')?.touched">mínimo 1 letra</span>
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+        <mat-label> Leccion </mat-label>
+        <mat-select matInput formControlName="lesson" >
+            <mat-option *ngFor="let leccion of lecciones" [value]="leccion.id">{{leccion.theme}}</mat-option>
+        </mat-select>          
+        <span style="color: red;" *ngIf="detalleForm.get('comment')?.hasError('minlength') && detalleForm.get('comment')?.touched">mínimo 1 letra</span>
+    </mat-form-field>
+</form>
+
+<br>
+<button *ngIf="!noExiste" mat-flat-button color="primary" (click)="registrarEjercicio()" [disabled]="detalleForm.invalid">Grabar</button>       
+<span *ngIf="!noExiste"> | </span>       
+<button mat-flat-button color="accent" routerLink="/lista-ejercicios" (click)="cancelar()">Cancelar</button>

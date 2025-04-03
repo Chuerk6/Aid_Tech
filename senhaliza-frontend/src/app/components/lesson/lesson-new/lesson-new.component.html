@@ -1,0 +1,28 @@
+<h4>Leccion</h4>
+<span *ngIf="noExiste">Leccion con el codigo {{idLesson}} no existe </span>
+
+
+<form [formGroup]="detalleForm" *ngIf="!noExiste">
+  <mat-form-field appearance="fill" >
+    <mat-label>Id del leccion</mat-label>
+    <input matInput formControlName="id" readonly="true">                
+  </mat-form-field>
+    <br>
+  <mat-form-field appearance="fill">
+    <mat-label> Tema </mat-label>
+    <input matInput formControlName="theme" >
+    <span style="color: red;" *ngIf="detalleForm.get('theme')?.hasError('minlength') && detalleForm.get('theme')?.touched">mínimo 3 letras</span>
+  </mat-form-field>
+    <br>
+  <mat-form-field appearance="fill">
+    <mat-label> Descripcion </mat-label>
+    <textarea matInput formControlName="description" ></textarea>          
+    <span style="color: red;" *ngIf="detalleForm.get('description')?.hasError('minlength') && detalleForm.get('description')?.touched">mínimo 1 letra</span>
+  </mat-form-field>
+    <br>  
+</form>
+
+<br>
+<button *ngIf="!noExiste" mat-flat-button color="primary" (click)="registrarLeccion()" [disabled]="detalleForm.invalid">Grabar</button>       
+<span *ngIf="!noExiste"> | </span>       
+<button mat-flat-button color="accent" routerLink="/lista-lecciones" (click)="cancelar()">Cancelar</button>

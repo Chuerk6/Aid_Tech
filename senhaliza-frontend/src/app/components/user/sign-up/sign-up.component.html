@@ -1,0 +1,42 @@
+<div class="fondo">
+    <button class="btnLP" mat-flat-button (click)="irALandingPage()"><mat-icon>keyboard_arrow_left</mat-icon> Regresar</button>
+    <div class="contenedor">
+        <h4>Registrarse</h4>
+        
+        <form [formGroup]="signUpForm">
+            <mat-form-field appearance="fill">
+                <mat-label>Usuario</mat-label>
+                <input matInput formControlName="userName">
+                <span style="color: red;" *ngIf="signUpForm.get('userName')?.hasError('minlength') && signUpForm.get('userName')?.touched">minimo 3 caracteres</span>
+            </mat-form-field>
+            <button class="eye" disabled>
+                <mat-icon></mat-icon>
+            </button>
+            
+            <mat-form-field appearance="fill">
+                <mat-label>Contraseña</mat-label>
+                <input matInput formControlName="password" [type]="muestraPassword?'text':'password'">
+                <span style="color: red;" *ngIf="signUpForm.get('password')?.hasError('minlength') && signUpForm.get('password')?.touched">minimo 3 caracteres</span>
+            </mat-form-field>
+            <button class="eye" (click)="muestraPassword=!muestraPassword">
+                <mat-icon>{{muestraPassword?'visibility_off':'visibility'}}</mat-icon>
+            </button>
+
+            <mat-form-field appearance="fill">
+                <mat-label>Confirmar contraseña</mat-label>
+                <input matInput formControlName="confirmPassword" [type]="muestraPasswordConfirm?'text':'password'">
+                <span style="color: red;" *ngIf="signUpForm.get('confirmPassword')?.hasError('minlength') && signUpForm.get('confirmPassword')?.touched">minimo 3 caracteres</span>
+            </mat-form-field>
+            <button class="eye" (click)="muestraPasswordConfirm=!muestraPasswordConfirm">
+                <mat-icon>{{muestraPasswordConfirm?'visibility_off':'visibility'}}</mat-icon>
+            </button>
+            <br>
+            
+        </form>
+        <button mat-flat-button color="primary" (click)="registrarUsuario()" [disabled]="signUpForm.invalid">Registrar</button>
+        <br><br>
+        <span> ¿Ya tiene una cuenta? </span>
+        <br><br>
+        <button mat-flat-button (click)="irALogear()" routerLink="/login">Iniciar sesion</button>
+    </div>
+</div>

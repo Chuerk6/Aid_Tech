@@ -1,0 +1,96 @@
+table {
+  width: 100%;
+}
+.tabla{
+  overflow: auto;
+}
+
+.mat-mdc-form-field {/*buscar y agregar*/
+  font-size: 14px;
+  /* width: 100%; */
+  flex-grow: 1;
+  margin-right: 10px;
+}
+
+.buscar-filtrar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 20px 20px 0px 20px;
+  background: linear-gradient(#aff0ff, #edb2ff);
+  box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  mat-icon {
+    color: white;
+  }
+}
+
+/*Buscar*/
+mat-label {
+  color: #6b008bd6;
+}
+
+/*Agregar*/
+.agregar {
+  background: linear-gradient(#00d0ff, #c300ff);
+  box-shadow: 4px 0px 4px rgba(255, 255, 255, 0.4);
+}
+.agregar:hover {
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);
+}
+
+/*Texto gradiente y en negrita para el titulo y paginador*/
+h4,
+mat-paginator {
+  font-weight: bold;
+  background: linear-gradient(#00d0ff, #c300ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/*Sombra y estilo pegajoso para la tabla*/
+.mat-elevation-z8 {
+  box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.4);
+  max-width: 100%;
+}
+
+th {
+  text-transform: uppercase;
+  background: linear-gradient(#aff0ff, #edb2ff) !important;
+  min-width: 120px;
+}
+
+th,
+td {
+  border: 1px solid #0000ff1b;
+}
+
+tr:hover {
+  background-color: #eafbff;
+}
+
+mat-icon {
+  background: linear-gradient(#00d0ff, #630082);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  margin: 0px 8px;
+}
+
+.i-edit:hover {
+  background: linear-gradient(to top, #82e8ff, blue, #00758f);/*Color del icono editar*/
+  background-clip: text;
+  color: transparent;
+  transform: scale(1.2);
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
+}
+
+.i-delete:hover {
+  background: linear-gradient(to top, #e385ff, red, #630082);/*color del icono eliminar*/
+  background-clip: text;
+  color: transparent;
+  transform: scale(1.2);
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
+}

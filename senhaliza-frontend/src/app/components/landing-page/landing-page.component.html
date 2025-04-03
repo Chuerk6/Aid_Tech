@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AID TECH</title>
+    <link rel="stylesheet" type="text/css" href="landing-page.component.css">
+    <!-- Link de la pagina donde estan todos las tipografias -->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/30effb0e24.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <section class="home" id="home">
+        <header class="header">
+            <div class="main_logotype">
+                <a href="#" class="link_logo">
+                    <img src="https://res.cloudinary.com/dvg1yms5d/image/upload/v1717878589/AidTech/Landing%20page/mala9yg31e8gqucmjg9c.png"  class="logo">
+                    AID TECH
+                </a>
+            </div>
+            <nav class="header_nav" id="header_nav">    
+                <ul class="header_nav_ul">
+                    <li class="opcion"><a href="#home">Comenzar</a></li>
+                    <li class="opcion"> <a href="#sobre_nosotros">Sobre Nosotros</a></li>
+                    <li class="opcion"><a href="#precios">Precios</a></li>
+                    <li class="opcion"><a href="#section_Funcionalidades">Funcionalidades</a></li>
+                    <li class="opcion"><a href="#contacto">Contacto</a></li>
+                    <li class="opcion"><a href="#descargar">Descargar</a></li>
+                </ul>
+            </nav>
+            <div class="opciones_de_inicio_sesion">
+                    <a (click)="irARegistrar()" routerLink="signup" class="link_crear_cuenta">Crear cuenta</a>
+                    <a (click)="irALogear()" routerLink="login" class="link_iniciar_sesion">Iniciar Sesion</a>
+            </div>
+            <div class="opcion_desplazar">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <!-- MENU DE OPCIONES del RESPONSIVE -->
+            <div class="menu_responsive">
+                <li class="opcion"><a href="#home">Comenzar</a></li>
+                    <li class="opcion"> <a href="#sobre_nosotros">Sobre Nosotros</a></li>
+                    <li class="opcion"><a href="#precios">Precios</a></li>
+                    <li class="opcion"><a href="section_Funcionalidades.html">Funcionalidades</a></li>
+                    <li class="opcion"><a href="#contacto">Contacto</a></li>
+                    <li class="opcion"><a href="#descargar">Descargar</a></li>
+                <a href="" class="link_crear_cuenta">Crear cuenta</a>
+                <a href="" class="link_iniciar_sesion">Iniciar Sesion</a>
+            </div>
+        </header>
+        <!-- PANTALLA PRINCIPAL -->
+        <section class="main">
+            <div class="container_frace_descripcion">
+                <h1 class="h1_frace_principal">Comunicate sin límites</h1>
+                <h3 class="h3_descripcion_de_frace_princil">Convierte los gestos en palabras<br>
+                    y las palabras en señas 
+                </h3>
+                <div class="container_button_comenzar">
+                    <Button class="btn_empezar" routerLink="login" (click)="irALogear()"><a style="color: azure;">Empezar</a> </Button>
+                </div>
+            </div>
+            <div class="container_img_principal">
+                <img src="https://res.cloudinary.com/dvg1yms5d/image/upload/v1717878752/AidTech/Landing%20page/qsrkatz1dkk3iyruyd3z.png" alt="" class="imghome img_desktop">
+                <img src="https://res.cloudinary.com/dvg1yms5d/image/upload/v1717878751/AidTech/Landing%20page/z5gvotesiapbquu7jhqi.png" alt="" class="imghome img_mobile">
+            </div>  
+        </section>  
+    <!-- GLOVOS DE FONDO -->
+        <div class="circulo1-home circulo"></div>
+        <div class="circulo2-home circulo"></div>
+        <div class="circulo3-home circulo"></div>
+        <div class="circulo4-home circulo"></div>    
+    </section>
+
+    <section class="cuerpo">
+        <!--  SECCION SOBRE NOSOTROS -->
+        <section class="sobre_nosotros" id="sobre_nosotros" >
+            <div class="continer_sobre_nosotros">
+                <div class="informacion_sobre_nosotros">
+                    <h2>SOBRE NOSOTROS</h2>
+                    <p>
+                        Nuestra plataforma es un servicio en línea que facilita
+                        la comunicación entre personas que utilizan 
+                        lenguaje de señas y aquellas que prefieren el lenguaje escrito. 
+                        Proporcionamos herramientas y recursos para traducir de manera 
+                        efectiva entre estos dos medios de comunicación
+                    </p>
+                </div>
+                <div class="circulo_fondo_1"></div>
+                <img src="https://res.cloudinary.com/dvg1yms5d/image/upload/v1717878858/AidTech/Landing%20page/bumdlbajt8wotlxtykx4.png" alt="">
+            </div>
+            <div class="container_vision">
+                <div class="informacion_mision">
+                    <h2>VISION</h2>
+                    <p>
+                        Nuestra visión es una comunicación inclusiva y fluida entre lenguaje
+                        de señas y lenguaje escrito, eliminando barreras y empoderando 
+                        a las personas sordas y con discapacidades auditivas.
+                    </p>
+                </div>
+                <div class="circulo_fondo_2"></div>
+                <img src="https://res.cloudinary.com/dvg1yms5d/image/upload/v1717878890/AidTech/Landing%20page/v2yr6tbfp5w6jarz7sqa.jpg" alt="">
+            </div>
+            <div class="container_mision">
+                <div class="informacion_vision">
+                    <h2>MISIÓN</h2>
+                    <p>
+                        Nuestra misión es promover una comunicación inclusiva y sin barreras entre 
+                        lenguaje de señas y lenguaje escrito, mejorando la accesibilidad y la calidad 
+                        de vida de personas sordas y con discapacidades auditivas a través de nuestra
+                        avanzada aplicación de traducción.
+                    </p>
+                </div>
+                <div class="circulo_fondo_3"></div>
+                <img src="https://res.cloudinary.com/dvg1yms5d/image/upload/v1717878893/AidTech/Landing%20page/a1dktbjignthqcmb4hdj.jpg" alt="">
+            </div>
+        </section>
+
+        <!-- SECCION CONTACTANOS -->
+        <section class="contactanos" id="contacto">
+            <div class="informacion_contactanos">
+                <h2>CONTÁCTANOS</h2>
+                <p>
+                    ¡Nos encantaría saber de ti! Completa nuestro formulario de contacto y 
+                    estaremos encantados de responder a tus preguntas, brindarte más 
+                    información o ayudarte en lo que necesites. ¡Esperamos con ansias escucharte!
+                </p>
+                <a href="#"><i class="fa-sharp fa-solid fa-phone"></i>99900011</a>
+                <a href="#"><i class="fa-regular fa-envelope"></i>AitTechgmail.com</a>
+                <a href="#"><i class="fa-brands fa-facebook-f"></i>AID_TECH</a>
+                <a href="#"><i class="fa-brands fa-instagram"></i>AID_TECH</a>
+            </div>
+            <form class="form">
+                    <input type="text" class="input_nombre_form" placeholder="Nombre">
+                    <input type="email" class="input_email_form" placeholder="Correo Electronico">
+                    <textarea class="textarea" placeholder="Comentario"></textarea>
+                    <input type="submit" class="input_submit" >
+                </form>
+        </section>        
+
+
+
+
+        <section class="section_Funcionalidades" id="section_Funcionalidades">
+            <h2 class="h2_funcionalidades">FUNCIONALIDADES</h2>
+            <section class="container_funcionalidades">
+                <div class="funcionalidad">
+                    <div class="container_info_funcionalidad">
+                        <h3>TRADUCCIÓN DE TEXTO A SEÑAS</h3>
+                        <p>Combierte tus fraces u oraciones a lenguaje de señas facilmente</p>
+                    </div>
+                    <img src="https://res.cloudinary.com/dvg1yms5d/image/upload/v1717879126/AidTech/Landing%20page/scnds2zzdxpd1s1jtxja.png" alt="">
+                </div>
+                <div class="funcionalidad">
+                    <img src="https://res.cloudinary.com/dvg1yms5d/image/upload/v1717879125/AidTech/Landing%20page/j7v2esgsl1swvhvchitt.png" alt="">
+                    <div class="container_info_funcionalidad">
+                        <h3>TRADUCCIÓN DE SEÑAS A TEXTO </h3>
+                        <p>Descubre la magia de convertir tus señas en texto con nuestra aplicación móvil</p>
+                    </div>
+                </div>
+                <div class="funcionalidad">
+                    <div class="container_info_funcionalidad">    
+                        <h3>JUEGOS</h3>
+                        <p>Diviértete con juegos en lenguaje de señas en nuestra app móvil</p>
+                    </div>  
+                    <img src="https://res.cloudinary.com/dvg1yms5d/image/upload/v1717879126/AidTech/Landing%20page/ys3gx6dckyiqnnt7bar2.png" alt="">
+                </div>
+                <div class="funcionalidad">
+                    <img src="https://res.cloudinary.com/dvg1yms5d/image/upload/v1717879126/AidTech/Landing%20page/jrdhzj3sqwjqilsqfqki.png" alt="">
+                    <div class="container_info_funcionalidad">
+                        <h3>DICCIONARIO</h3>
+                        <p>Explora herramientas efectivas para optimizar tu aprendizaje de señas</p>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+
+
+
+
+        <!-- SECCION PRECIOS -->
+        <section class="precios" id="precios">
+            <div class="enunciado_precios">
+                <h2>PRECIOS</h2>
+                <P>Disfruta de planes de suscripción anuales/mensuales  y accede a todas las
+                    funciones y características premium. Rompe las barreras lingüísticas 
+                    con precios flexibles y asequibles."
+                </P>
+            </div>
+            <div class="precios_flex">
+                <!-- plan basico -->
+                <div class="precios_item">
+                    <h4 class="lbl_basico">BÁSICO</h4>
+                    <p class="lp_precio_plan">S/ 0,00</p>
+                    <ul>
+                        <li class="caracteristicas_li">
+                            <p><i class="fa-solid fa-circle-check"></i>Máximo 5 vidas al dia para los retos</p>
+                        </li>
+                        <li class="caracteristicas_li">
+                            <p><i class="fa-solid fa-circle-check"></i>Máximo 20 traducciones al día</p>
+                        </li>
+                        <li class="caracteristicas_li">
+                            <p><i class="fa-sharp fa-solid fa-circle-xmark"></i>Sin anuncios</p>
+                        </li>
+                        <li class="caracteristicas_li">
+                            <p><i class="fa-sharp fa-solid fa-circle-xmark"></i>Videos de aprendizaje</p>
+                        </li>
+                        <li class="caracteristicas_li">
+                            <p><i class="fa-solid fa-circle-check"></i>Solo en Español e Ingles</p>
+                        </li>
+                    </ul>
+                    <div class="container_button">
+                        <button class="btn_comenzar">COMENZAR</button>
+                    </div>  
+                </div>
+            <!-- plan premium mensual -->
+            <div class="precios_item">
+                <h4 class="lbl_premium_mensual">PREMIUM MENSUAL </h4>
+                    <p class="lp_precio_plan">s/ 29,00</p>
+                    <ul>
+                        <li class="caracteristicas_li">
+                            <p><i class="fa-solid fa-circle-check"></i>Vidas ilimitadas para los retos</p>
+                        </li>
+                        <li class="caracteristicas_li">
+                            <p><i class="fa-solid fa-circle-check"></i>Traducción sin límites</p>
+                        </li>
+                        <li class="caracteristicas_li">
+                            <p><i class="fa-solid fa-circle-check"></i>Sin anuncios</p>
+                        </li>
+                        <li class="caracteristicas_li">
+                            <p><i class="fa-solid fa-circle-check"></i>Videos de aprendizaje</p>
+                        </li>
+                        <li class="caracteristicas_li">
+                            <p><i class="fa-solid fa-circle-check"></i>Más de 20 idiomas</p>
+                        </li>
+                        <li class="caracteristicas_li">
+                            <p><i class="fa-solid fa-circle-check"></i>
+                                Descarga resucursos adicionales: (pdf de señas, imagenes ....)</p>
+                        </li>
+                    </ul>
+                    <div class="promocion_premium_mensaul">
+                        Obtenga sus primeros 3 meses a solo s/10 al mes
+                    </div>
+                    <div class="container_button">
+                        <button class="btn_comenzar">COMENZAR</button>
+                    </div>  
+                </div>
+                <!-- plan premium anual -->  
+                <div class="precios_item precios_item_anual">
+                    <h4 class="lbl_premium_anual">PREMIUM ANUAL</h4>
+                    <p class="lp_precio_plan">s/ 300,00</p>
+                    <ul>
+                        <li class="caracteristicas_li">
+                            <p><i class="fa-solid fa-circle-check"></i>Vidas ilimitadas para los retos</p>
+                        </li>
+                        <li class="caracteristicas_li">
+                            <p><i class="fa-solid fa-circle-check"></i>Traducción sin límites</p>
+                        </li>
+                        <li class="caracteristicas_li">
+                            <p><i class="fa-solid fa-circle-check"></i>Sin anuncios</p>
+                        </li>
+                        <li class="caracteristicas_li">
+                            <p><i class="fa-solid fa-circle-check"></i>Videos de aprendizaje</p>
+                        </li>
+                        <li class="caracteristicas_li">
+                            <p><i class="fa-solid fa-circle-check"></i>Más de 20 idiomas</p>
+                        </li>
+                        <li class="caracteristicas_li">
+                            <p><i class="fa-solid fa-circle-check"></i>
+                                Descarga resucursos adicionales: (pdf de señas, imagenes ....)</p>
+                        </li>
+                    </ul>
+                    <div class="promocion_premium_anual">
+                        Obtenga sus primeros 3 meses a solo s/10 al mes
+                    </div>
+                    <div class="container_button">
+                        <button class="btn_comenzar_anul">COMENZAR</button>
+                    </div>  
+                </div>
+            </div>
+        </section>
+        
+    </section>
+    <div class="adorno_footer"></div>
+    <footer class="footer" id="descargar">
+        <div class="seccion1">
+            <img width="50px" src="https://res.cloudinary.com/dvg1yms5d/image/upload/v1717878589/AidTech/Landing%20page/mala9yg31e8gqucmjg9c.png" alt="">
+            
+            <p class="seccion1_p1">
+                <a href="">Descargar ahora</a>
+                <a href="">Licencia</a>
+            </p>
+            <a href="">Acerca de</a>
+            <a href="">Caracteristicas</a>
+            <a href="">Precios</a>
+            <a href="">Ayuda</a>
+            <a href="">Politica de provacidad</a>
+            <p class="seccion1_p2">© 2023 AID TECH. Todos los derechos reservados</p>
+        </div>
+        <div class="seccion2">
+            <h5>Obtener la App</h5>
+            <button class="btn_descargar">
+                <i class="fa-brands fa-google-play"></i>
+                <p>Descargar en <br> Google Play</p>
+            </button>
+            <button class="btn_descargar">s
+                <i class="fa-brands fa-apple"></i>
+                <p>Descargar en <br> App Store</p>
+            </button>
+            <div class="container_redes">
+                <a href="#" class="link-google"><i class="fa-brands fa-google"></i></a>
+                <a href="#" class="link-facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" class="link-instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="link-aws"><i class="fa-brands fa-aws"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script src="landing_page.js"></script>
+</body>

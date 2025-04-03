@@ -1,0 +1,73 @@
+.img{
+    max-width: 400px;
+    box-shadow:  0px 0px 16px rgba(0, 0, 0, 0.2);;
+    padding: 20px;  
+    margin: 20px;
+    border-radius: 1rem;
+}
+
+img{
+    width: 100%;
+}
+
+mat-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cuadro-respuesta{
+    margin: 40px 0 0 0;
+}
+
+.barra-inferior{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+}
+
+
+button{
+    width: 150px;
+    background-clip: text;
+    border: 2px solid white;
+    text-align: center;
+    box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.8);
+}
+button:hover{
+    background: linear-gradient(#00d0ff, #bf00ff);
+    border: none;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+button:disabled{
+    color:rgb(102, 102, 102);
+    border: 2px solid rgb(110, 110, 110);
+}
+
+.correcta{
+    display: flex;
+    align-items: center;
+}
+
+.incorrecta{
+    display: flex;
+    align-items: center;
+}
+
+mat-icon{
+    margin-right: 10px;
+}
+
+
+span{
+    font-size: 24px;
+    font-weight: bolder;
+}

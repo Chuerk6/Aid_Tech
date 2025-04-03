@@ -1,0 +1,41 @@
+<div class="fondo">
+    <button class="btnLP" mat-flat-button (click)="irALandingPage()" routerLink="/"> <mat-icon>keyboard_arrow_left</mat-icon>Regresar</button>
+    <div class="contenedor">
+    <h4>Iniciar sesion</h4>
+
+        <form [formGroup]="logeoForm" >
+            <mat-form-field appearance="fill" >
+                <mat-label>Usuario</mat-label>
+                <input matInput formControlName="userName">                
+                <span style="color: red;" *ngIf="logeoForm.get('userName')?.hasError('minlength') && logeoForm.get('userName')?.touched">Debe tener un minimo de 3 caracteres</span>
+            </mat-form-field>
+            <button class="eye" disabled>
+                <mat-icon></mat-icon>
+            </button>
+            
+            <br>
+            <mat-form-field appearance="fill">
+                <mat-label>Contraseña</mat-label>
+                <input matInput formControlName="password" [type]="muestraPassword?'text':'password'" >
+                <span style="color: red;" *ngIf="logeoForm.get('password')?.hasError('minlength') && logeoForm.get('password')?.touched">Debe tener un minimo de 3 caracteres</span>
+            </mat-form-field>
+
+            <button class="eye" (click)="muestraPassword=!muestraPassword">
+                <mat-icon>{{muestraPassword?'visibility_off':'visibility'}}</mat-icon>
+            </button>
+
+        </form>
+        
+        <a href="#">Olvide mi contraseña</a>
+        <br>
+        <button mat-flat-button color="primary" (click)="logearUsuario()" [disabled]="logeoForm.invalid">Ingresar</button>       
+        <br>
+        <br>
+        <span > ¿No tiene una cuenta? </span>       
+        <br>
+        <br>
+        <button mat-flat-button color="accent" (click)="irARegistrar()" routerLink="/sign-up">Registrarse</button>
+        
+    </div>
+</div>
+

@@ -1,0 +1,45 @@
+<p>question-to-complete works!</p>
+<app-progress-spinner *ngIf="cargando"></app-progress-spinner>
+<div *ngIf="!cargando">
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>{{ejercicioActual.question}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="img">
+        <img src="{{imagenActual.link}}" alt="">
+    </mat-card-content>
+    <mat-card-footer>
+        <form [formGroup]="preguntaForm">
+            <mat-form-field class="cuadro-respuesta">
+                <mat-label>Respuesta</mat-label>
+                <input matInput formControlName="answer" style="text-align: center !important;">
+            </mat-form-field>
+        </form>
+    </mat-card-footer>
+</mat-card>
+
+<div class="barra-inferior">
+    <div>
+        <div *ngIf="respuestaEnviada" class="confirmacion">
+            <div *ngIf="respuestaCorrecta" class="correcta" style="color: #009dc0">
+                <div><mat-icon class="icono"> check_circle_outline </mat-icon></div>
+                <div class="mensaje">
+                    <span>Correcto</span>
+                    <p>Significado: {{imagenActual.meaning}}</p>
+                    <p>Comentario: {{ejercicioActual.comment}}</p>
+                </div>
+            </div>
+            <div *ngIf="!respuestaCorrecta" class="incorrecta" style="color: #bf00ff">
+                <mat-icon> highlight_off </mat-icon>
+                <div class="mensaje">
+                    <span>Incorrecto</span>
+                    <p>Comentario: No es la respuesta</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <button mat-flat-button class="btnEnviar" [disabled]="preguntaForm.invalid" (click)="enviarRespuesta()"><mat-icon style="margin-left: 10px;"> {{respuestaEnviada? (respuestaCorrecta? 'skip_next' : 'replay') : 'send'}} </mat-icon></button>
+    </div>
+</div>
+</div>

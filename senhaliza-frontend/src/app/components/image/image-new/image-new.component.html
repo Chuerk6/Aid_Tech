@@ -1,0 +1,26 @@
+<h4>Imagen</h4>
+<span *ngIf="noExiste">Imagen con el codigo {{idImage}} no existe </span>
+
+
+<form [formGroup]="detalleForm" *ngIf="!noExiste">
+  <mat-form-field appearance="fill" >
+    <mat-label>Id del imagen</mat-label>
+    <input matInput formControlName="id" readonly="true">                
+  </mat-form-field>
+    <br>
+  <mat-form-field appearance="fill">
+    <mat-label> Significado </mat-label>
+    <input matInput formControlName="meaning" >                
+  </mat-form-field>
+    <br>
+  <mat-form-field appearance="fill">
+    <mat-label> Url </mat-label>
+    <textarea matInput formControlName="link" ></textarea>          
+  </mat-form-field>
+    <br>
+</form>
+
+<br>
+<button *ngIf="!noExiste" mat-flat-button color="primary" (click)="registrarImagen()">Grabar</button>       
+<span *ngIf="!noExiste"> | </span>       
+<button mat-flat-button color="accent" routerLink="/lista-imagenes" (click)="cancelar()">Cancelar</button>

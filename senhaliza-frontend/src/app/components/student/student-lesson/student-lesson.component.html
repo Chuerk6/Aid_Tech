@@ -1,0 +1,15 @@
+<h4>Lecciones🧠</h4>
+<div class="cards-container">
+  <mat-card *ngFor="let lesson of lessons" class="card" appearance="outlined">
+      <mat-card-header>
+        <mat-card-title>{{lesson.theme}}💪</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <img mat-card-image src="https://www.fa-mag.com/userfiles/0000002019_IMAGES_ALL/FA_ISSUES_2019/10_FA_OCTOBER_2019/LONGVIEW_Lessons-From-A-Young-Professional_Patel--600x400.jpg" alt="Photo of a Shiba Inu">
+        <p style="font-style: italic;">{{lesson.description}}</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button class="card-button" mat-button (click)="irAEjercicio(lesson.id)">Iniciar leccion</button>
+      </mat-card-actions>
+  </mat-card>
+</div>

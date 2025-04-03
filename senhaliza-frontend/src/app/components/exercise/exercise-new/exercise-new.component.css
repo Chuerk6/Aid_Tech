@@ -1,0 +1,27 @@
+*{
+    margin-left: 4px;
+}
+
+h4{
+    color: white;
+    text-align: center;
+}
+
+button{
+    width: 100px;
+    background-clip: text;
+    border: 2px solid white;
+}
+button:hover{
+    background: linear-gradient(#00d0ff, #bf00ff);
+    border: none;
+}
+button:disabled{
+    color:grey;
+    border: 2px solid grey;
+}
+
+span{
+    color: #bf00ff !important;
+    font-size: 10px;
+}

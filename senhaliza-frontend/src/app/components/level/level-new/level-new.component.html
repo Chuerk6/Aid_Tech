@@ -1,0 +1,28 @@
+<h4>Nivel</h4>
+<span *ngIf="noExiste">Nivel con el codigo {{idLevel}} no existe </span>
+
+
+<form [formGroup]="detalleForm" *ngIf="!noExiste">
+  <mat-form-field appearance="fill" >
+    <mat-label>Id del nivel</mat-label>
+    <input matInput formControlName="id" readonly="true">                
+  </mat-form-field>
+    <br>
+  <mat-form-field appearance="fill">
+    <mat-label> Nombre </mat-label>
+    <input matInput formControlName="name" >
+    <span style="color: red;" *ngIf="detalleForm.get('name')?.hasError('minlength') && detalleForm.get('name')?.touched">mínimo 3 letras</span>
+  </mat-form-field>
+    <br>
+  <mat-form-field appearance="fill">
+    <mat-label> Descripcion </mat-label>
+    <textarea matInput formControlName="description" ></textarea>          
+    <span style="color: red;" *ngIf="detalleForm.get('description')?.hasError('minlength') && detalleForm.get('description')?.touched">mínimo 1 letra</span>
+  </mat-form-field>
+    <br>  
+</form>
+
+<br>
+<button *ngIf="!noExiste" mat-flat-button color="primary" (click)="registrarNivel()" [disabled]="detalleForm.invalid">Grabar</button>       
+<span *ngIf="!noExiste"> | </span>       
+<button mat-flat-button color="accent" routerLink="/lista-niveles" (click)="cancelar()">Cancelar</button>

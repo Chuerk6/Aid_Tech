@@ -1,0 +1,37 @@
+<mat-card>
+    <mat-card-header>
+        <!-- <mat-card-title>Which is the correct?</mat-card-title> -->
+        <mat-card-title>{{ejercicioActual.question}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-footer>
+                <mat-radio-group [(ngModel)]="selectedImageId">
+                    <mat-radio-button class="opciones" *ngFor="let image of opcionesImagenes" [value]="image.id.toString()">
+                        <img class="img-opciones" src="{{image.link}}" alt="">
+                    </mat-radio-button>
+                </mat-radio-group>
+    </mat-card-footer>
+</mat-card>
+
+<div class="barra-inferior">
+    <div>
+        <div *ngIf="respuestaEnviada" class="confimacion">
+            
+            <div *ngIf="respuestaCorrecta" class="correcta" style="color: #009dc0">
+                <mat-icon> check_circle_outline </mat-icon>
+                <div class="mensaje">
+                    <span>Correcto</span>
+                    <p>Significado: {{imagenCorrecta.meaning}}</p>
+                    <p>Comentario: {{ejercicioActual.comment}}</p>
+                </div>
+            </div>
+            <div *ngIf="!respuestaCorrecta" class="incorrecta" style="color: #bf00ff">
+                <mat-icon> highlight_off </mat-icon>
+                <div class="mensaje">
+                    <span>Incorrecto</span>
+                    <p>Comentario: No es la respuesta</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button mat-flat-button [disabled]="!selectedImageId" (click)="enviarRespuesta()"><mat-icon style="margin-left: 10px;"> {{respuestaEnviada? (respuestaCorrecta? 'skip_next' : 'replay') : 'send'}} </mat-icon></button>
+</div>

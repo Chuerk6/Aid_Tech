@@ -1,0 +1,10 @@
+<div class="dialogo">
+    <mat-dialog-content>
+        <ng-container [ngSwitch]="option">
+            <app-level-new *ngSwitchCase="'nivel'" (register)="confirmar()" [idLevel]="id"></app-level-new>
+            <app-image-new *ngSwitchCase="'imagen'" (register)="confirmar()" [idImage]="id"></app-image-new>
+            <app-exercise-new *ngSwitchCase="'ejercicio'" (register)="confirmar()" [idExercise]="id"></app-exercise-new>
+            <app-lesson-new *ngSwitchCase="'leccion'" (register)="confirmar()" [idLesson]="id"></app-lesson-new>
+        </ng-container>
+    </mat-dialog-content>
+</div>

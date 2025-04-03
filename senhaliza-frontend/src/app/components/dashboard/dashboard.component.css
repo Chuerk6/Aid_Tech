@@ -1,0 +1,44 @@
+table {
+    width: 100%;
+  }
+  
+  .mat-mdc-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  /*Buscar*/
+  mat-label {
+    color: #6b008bd6;
+  }
+  
+  /*Texto gradiente y en negrita para el titulo y paginador*/
+  h4,
+  mat-paginator {
+    font-weight: bold;
+    background: linear-gradient(#00d0ff, #c300ff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  /*Sombra para la tabla*/
+  .mat-elevation-z8 {
+    box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  th {
+    text-transform: uppercase;
+    background: linear-gradient(#aff0ff,#edb2ff) !important;
+  }
+  
+  th,
+  td {
+    border: 1px solid #0000ff1b;
+  }
+  
+  tr:hover {
+    background-color: #eafbff;
+  }
+  
