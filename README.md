@@ -77,20 +77,20 @@ Señaliza es una plataforma interactiva y educativa que permite a los usuarios a
 ### Vista de cliente
 
 Página de Inicio y Login
-
 ![Login Authentication](./assets/1.png)
 
-Página Home y Administración de Estudiantes
+Ventana de home del usuario con rol de student y la navegación por el side nav, el usuario podrá administrar su perfil y podrá comenzar su aprendizaje iniciando cualquier lección disponible.
 
-![Perfil de usuario](./assets/2.png)
+![Perfil de usuario](./assets/3.png)
 
 ### Vista de administrador
 
 Página de Inicio y Login
 
-![Login Authentication](./assets/1Admin.png))
+![Login Authentication](./assets/1Admin.png)
 
-Página Home y vista de lecciones
 
-![Página de productos del administrador](./assets/3.png)
+Ventana de home del usuario con rol de administrador y navegación a través de un side nav, el administrador controla el registro, actualización y eliminación de diferentes entidades. 
+
+![Página de productos del administrador](./assets/2.png)
 
