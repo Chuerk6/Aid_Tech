@@ -1,0 +1,435 @@
+body {
+    height: 100%;
+    /* porcentaje total del bloque padre*/
+    margin: 0px;
+    /* No hay espaciado de afuera entre otro bloque(hmtl)*/
+    padding: 0px;
+    /* No hay espaciado  adentro del bloque*/
+}
+
+.hero {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+}
+
+.nav {
+    position: relative;
+    /* Es para mover los elementos dentro del bloque*/
+    display: flex;
+    /*Columnas*/
+    width: 100vw;
+    min-width: 450px;
+    height: 60px;
+    background-color: #000000;
+    flex-wrap: wrap;
+    font-weight: 10;
+    /*GROSOR DE LA LETRA*/
+    z-index: 1;
+    /*para que se muestre detras de todos*/
+    /* position: sticky; */
+}
+
+/* ------------------------------------------------------HEADER---------------------------- */
+/* Header -> nav -> logo AID TECH */
+.nav_logo {
+    width: 100px;
+    height: 100%;
+    flex: 1;
+    /* background-color: blueviolet; */
+    display: flex;
+    justify-content: center;
+    /*Alinearlo en el medio del eje 'x' o horizantal*/
+    align-items: center;
+    /*Alinearlo en el medio del eje 'y' o vertical*/
+}
+
+div .logo_AID {
+    width: 50px;
+}
+
+/* Header -> NAV -> Iconocs y opciones de menu */
+.nav-iconos {
+    margin: 0;
+    padding: 0px;
+    display: flex;
+    height: 100%;
+    min-width: 150px;
+    flex: 3;
+    /*Le da 3/4 del total de ancho */
+    background-color: #000000;
+    justify-content: center;
+    /*el contenido esta al centro horizontalmente*/
+    /*flex-end : al final*/
+    align-items: center;
+    /*eje 'y' , centro*/
+}
+
+.nav-li {
+    display: flex;
+    font-size: 16px;
+    /*tamaño de la letra*/
+    height: 50%;
+    align-items: center;
+    padding: 0px 0px;
+    transition: all .5s;
+}
+
+.nav-li:hover {
+    background-color: #2197B1;
+    border-radius: 20px;
+    transition: .5s;
+}
+
+.nav-li a {
+    /*Las letras: Menu, precios, contacto, etc*/
+    text-decoration: none;
+    color: #ffffff;
+    width: 100%;
+    text-align: center;
+    margin: 0px 10px 0 5px;
+    /*arriba, derecha, abajo, izquierda*/
+}
+
+.nav-li i {
+    /*imagen , casa, dolar, etc*/
+    margin-left: 10px;
+}
+
+.nav_dowloand {
+    flex: 1.4;
+    display: flex;
+    justify-content: center;
+    /*Alinearlo en el medio del eje 'x' o horizantal*/
+    align-items: center;
+    /*Alinearlo en el medio del eje 'y' o vertical*/
+}
+
+.logo_googlePlay {
+    width: 120px;
+}
+
+.app_store {
+    width: 90px;
+    margin-left: 20px;
+}
+
+.configuracion {
+    width: 35px;
+    margin-left: 20px;
+
+}
+
+.logos_hover:hover {
+    background-color: #9adfee;
+    transition: .5s;
+}
+
+/* ------------------------------------------------------------------------------------------------------ */
+
+.container_2 {
+    /*Columnas */
+    background-color: #85ccdc;
+    height: calc(100vh - 60px);
+    width: 100%;
+    align-items: center;
+    /*y*/
+    justify-content: center;
+    /*x*/
+}
+
+.div_container2 {
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+}
+/*DICCIONARIO*/
+.diccionario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*el bloque*/
+.div_diccionario {
+    flex-direction: column;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*el borde de la palabra, rosado*/
+.a_diccionario {
+    background-color: #B252B4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0 30px 0;
+    padding: 0px 40px;
+    border-radius: 20px;
+}
+.a_diccionario:hover{
+    color: #ffffff;
+    background-color: #215a9b;
+}
+/*La letra */
+.a_diccionario a {
+    color: #ffffff;
+    margin: 10px 40px 10px 40px;
+    border-radius: 100px;
+    font-size: 20px;
+    padding: 0px;
+    text-decoration: none;
+}
+.libro{
+    height: 100px;
+}
+
+/*TODAS LAS IMAGENES*/
+.imag{
+    height: 70px;
+    width: 90px;
+}
+
+/*PRIMERA FILA*/
+.num_abc_etc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 0 60px 0;
+}
+/*Bloques de la 1 fila*/
+.div_num_abc_etc {
+    
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 70px 0 50px;
+    background-color: rgba(254, 243, 243, 0.808);
+    padding: 10px 10px 10px 10px;
+    border-radius: 20px;
+}
+.a_filas{
+    background-color: #B252B4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px 0 5px 0;
+    padding: 5px 20px;
+    border-radius: 20px;
+}
+.a_filas:hover, .a_filas a:hover{
+    background-color: #8aa010;
+    color: #000000;
+}
+.a_filas a{
+    color: #ffffff;
+    border-radius: 100px;
+    font-size: 15px;
+    padding: 0px;
+    text-decoration: none;
+}
+ 
+
+/*SEGUNDA FILA*/
+
+.alim_frutas_etc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 0 60px 0;
+
+}
+.div_alim_frutas_etc {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 70px 0 50px;
+    background-color: rgba(254, 243, 243, 0.808);
+    padding: 10px 10px 10px 10px;
+    border-radius: 20px;
+}
+ 
+/*NAV_PAGES*/
+.navegar_pages{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+.a_pages{
+    background-color: #cceaf3d5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0 0px 30px;
+    padding: 5px 20px;
+    border-radius: 20px;
+    z-index: 1;
+}
+.a_pages:hover, .a_pages a:hover{
+    background-color: #8aa010;
+    color: #000000;
+}
+.a_pages a{
+    color: #000000;
+    border-radius: 100px;
+    font-size: 18px;
+    padding: 0px;
+    text-decoration: none;
+}
+ 
+
+
+
+/* Bolas de colores */
+
+.globo {
+    position: absolute;
+    width: 165px;
+    height: 165px;
+    border-radius: 50%;
+}
+
+.globo1 {
+    left: 35px;
+    top: 6px;
+    background-color: #B252B4;
+}
+
+.globo2 {
+    left: 1px;
+    top: -35px;
+    background-color: #FF802C;
+}
+
+.globo3 {
+    left: -67.07px;
+    top: 40px;
+    background-color: #B252B4;
+}
+
+.globo4 {
+    left: -135px;
+    top: 149px;
+    background-color: #FF802C;
+}
+
+
+/*--------------------------------------------*/ 
+.adorno_footer{
+    width: 100%;
+    height: 100px;
+    background:#2197B1 ;
+}
+footer{
+    width: 100%; 
+    background-color: #000;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 60px 60px 30px 60px;
+    font-family: 'Inter';
+    font-style: normal; 
+    color: #ffff; 
+}
+.seccion1{ 
+    width: 580px;
+}
+.seccion1 p{
+    text-align: start;
+    margin:20px 20px 20px 0;
+    padding: 0;
+    font-size: 16px;
+}
+.seccion1_p1 a, .seccion1 a{
+    color: #ffff;
+    padding-right: 20px;
+    font-size: 16px;
+}
+.seccion1_p1 a:hover, .seccion1 a:hover{
+    border-bottom: 3px solid #B252B4;
+} 
+.seccion2{
+    min-width: 300px;
+}
+.seccion2 h5{
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    margin: 15px 0;
+}
+.btn_descargar{
+    border-radius: 20px;
+    border: 2px solid #ffff;
+    background: none;
+    display: inline-block;
+    margin: 5px 10px;
+}
+.btn_descargar i{
+    margin: 5px 3px;
+    display: inline-block;
+    font-size: 40px;
+    color: #ffff;
+}
+.btn_descargar p{
+    font-size: 16px;
+    display: inline-block;
+    color: #ffff;
+    margin: 5px 8px ;
+}
+.btn_descargar:hover{
+    background: #ffff;
+    cursor: pointer;
+}
+.btn_descargar:hover a,.btn_descargar:hover i,.btn_descargar:hover p{
+    color: #000000;
+}
+/* ---------redes----- */
+.container_redes{
+    display: flex;
+    height: 40px;
+    width: 100%;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+.container_redes a{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid #000000;
+    text-decoration: none;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 1s;
+}
+.container_redes .fa-brands{
+    color: #fff;
+    transition: all 0.5s;
+}
+.container_redes a:hover .fa-brands{
+    color: #ffffff;
+}
+/* ------para GOOGLE---- */
+a.link-google:hover{    
+    background: linear-gradient(to top,#4285F4,#34A853,#FBBC05,#EA4335);
+}
+/* ------para FACEBOOK---- */
+a.link-facebook:hover{
+    background: #3b5998;
+}
+/* ------para INSTAGRAM---- */
+a.link-instagram:hover{
+    background: linear-gradient(to top,#F58529,#FEDA77,#DD2A7B,#8134AF,#515BD4);
+}
+/* ------para AWS---- */
+a.link-aws:hover{
+    background: linear-gradient(to top,#d08006,#FF9900,#131A22,#232F3E);
+}

@@ -1,0 +1,372 @@
+body{
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+.hero{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+}
+.nav{
+    position: relative;
+    display: flex;
+    width: 100vw;
+    min-width: 450px;
+    height: 60px;
+    background-color:#000000;
+    flex-wrap: wrap;
+    font-weight: 10;
+    z-index: 1;
+    /* position: sticky; */
+}
+/* ------------------------------------------------------HEADER---------------------------- */
+/* Header -> nav -> logo AID TECH */
+.nav_logo{
+    width: 100px;
+    height: 100%;
+    flex: 1;
+    /* background-color: blueviolet; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div .logo_AID{
+    width: 50px;
+}
+
+/* Header -> NAV -> Iconocs y opciones de menu */
+.nav-iconos{
+    margin: 0;
+    padding: 0px;
+    display: flex;
+    height: 100%;
+    min-width: 150px;
+    flex: 3; /*Le da 3/4 del total de ancho */
+    background-color: #000000;
+    justify-content:center;
+    align-items: center;
+}
+
+.nav-li{
+    display: flex;  
+    font-size: 16px;
+    height: 50%;
+    align-items: center;
+    padding: 0px 0px;
+    transition: all .5s;
+}
+
+.nav-li:hover{
+    background-color: #2197B1;
+    border-radius: 20px;
+    transition: .5s;
+}
+
+.nav-li a{
+    text-decoration: none;
+    color: #ffffff;
+    width: 100%;
+    text-align: center;
+    margin: 0px 10px 0 5px;
+}
+
+.nav-li i{
+    margin-left: 10px;
+}
+
+.nav_download {
+    flex: 1.4;
+    display: flex;
+    justify-content: center;
+    /*Alinearlo en el medio del eje 'x' o horizantal*/
+    align-items: center;
+    /*Alinearlo en el medio del eje 'y' o vertical*/
+}
+
+.logo_googlePlay {
+    width: 120px;
+}
+
+.app_store {
+    width: 120px;
+    margin-left: 15px;
+}
+
+.configuracion {
+    width: 30px;
+    margin-left: 50px;
+    margin-right: 20px;
+
+
+}
+
+
+.container_2 {
+    /*Columnas */
+    background-color: #85ccdc;
+    height: calc(100vh - 60px);
+    width: 100%;
+    align-items: center;
+    /*y*/
+    justify-content: center;
+    /*x*/
+}
+.container_3 {
+    /*Columnas */
+    background-color: #dcac85;
+    height: 50vh;
+    width: 100%;
+    align-items: center;
+    /*y*/
+    justify-content: center;
+    /*x*/
+}
+
+.div_container2 {
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+}
+
+.juegos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*el bloque*/
+.div_juegos {
+    flex-direction: column;
+    margin-top: -40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*el borde de la palabra, rosado*/
+.a_juegos {
+    background-color: #FF802C;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0 30px 0;
+    padding: 0px 40px;
+    border-radius: 20px;
+}
+
+/*La letra */
+.a_juegos a {
+    color: #ffffff;
+    margin: 10px 40px 10px 40px;
+    border-radius: 100px;
+    font-size: 20px;
+    padding: 0px;
+    text-decoration: none;
+}
+.mando{
+    height: 170px;
+}
+
+.imag{
+    height: 90px;
+    width: 90px;
+}
+
+.adivinar_responrapid_queanimal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 0 50px 0;
+}
+
+.div_adivinar_responrapid_queanimal {
+    
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 70px -25px 100px;
+    background-color: rgba(254, 243, 243, 0.808);
+    padding: 15px 15px 15px 15px;
+    border-radius: 20px;
+}
+.a_filas{
+    background-color: #FF802C;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px 0 -10px 0;
+    padding: 5px 20px;
+    border-radius: 20px;
+}
+.a_filas:hover, .a_filas a:hover{
+    background-color: #f0db96;
+    color: #000000;
+}
+.a_filas a{
+    color: #ffffff;
+    border-radius: 100px;
+    font-size: 15px;
+    padding: 0px;
+    text-decoration: none;
+}
+
+
+.frutas_matemat {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 0 60px 0;
+
+}
+.div_frutas_matemat {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 100px 0 95px;
+    background-color: rgba(254, 243, 243, 0.808);
+    padding: 15px 15px 15px 15px;
+    border-radius: 20px;
+}
+ 
+/*NAV_PAGES*/
+.navegar_pages{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+.a_pages{
+    background-color: #cceaf3d5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0 0px 30px;
+    padding: 5px 20px;
+    border-radius: 20px;
+    z-index: 1;
+}
+
+.a_pages a{
+    color: #000000;
+    border-radius: 100px;
+    font-size: 18px;
+    padding: 0px;
+    text-decoration: none;
+}
+ 
+
+
+/* Bolas de colores */
+
+.globo{
+    position: absolute;
+    width: 165px;
+    height: 165px;
+    border-radius: 50%;
+}
+.globo1{
+    left: 35px;
+    top: 6px;
+    background-color: #B252B4;
+}
+.globo2{
+    left: 1px;
+    top: -35px;
+    background-color:#FF802C ;
+}
+.globo3{
+    left: -67.07px;
+    top: 40px;
+    background-color: #B252B4;
+}
+
+.globo4{
+    left: -135px;
+    top: 149px;
+    background-color: #FF802C;
+} 
+
+.bloque{
+    background-color: #2197B1;
+    width: 100%;
+    height: 100px;
+}
+
+.footer {
+    background-color: #000000;
+    padding: 10px 0px;
+    display: flex;
+}
+
+.all_footer {
+    display: flex;
+    color: rgb(255, 255, 255);
+    padding: 10px 10px 10px 0px;
+    margin: 0px 10px 0px 10px;
+}
+
+.col-1 {
+    margin: 0 10px 0 0;
+    padding-left: 20px;
+}
+
+.col-1 ul a {
+    text-decoration: none;
+    color: #ffffff;
+
+}
+
+.col-1 ul {
+    margin-bottom: 50px;
+    margin-top: 0px;
+    text-decoration: none;
+}
+
+.col-2 {
+    padding-top: 65px;
+
+}
+
+.col-2 ul a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    list-style-type: none;
+    list-style: none;
+
+}
+
+.col-3 {
+    padding-top: 0px;
+    justify-content: flex-end;
+    margin-left: 70vb;
+
+}
+
+.col-3 h4 {
+    margin: 10px 0 0 0;
+    text-align: center;
+    font-size: 20px;
+    /*tamaño de la letra*/
+    margin-bottom: 30px;
+}
+
+.social-links a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 20px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    margin-top: 30px;
+}
+
+.social-links a:hover {
+    color: #ffffff;
+    background-color: #ffffff7e;
+}
